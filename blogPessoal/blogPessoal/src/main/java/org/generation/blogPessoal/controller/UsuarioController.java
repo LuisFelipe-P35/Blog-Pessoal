@@ -62,7 +62,7 @@ public class UsuarioController {
 		Optional<Usuario> user = usuarioService.AtualizarUsuario(usuario);
 		try {
 			return ResponseEntity.ok(user.get());
-		} catch (Exception e) {
+		} catch (Exception erro) {
 			return ResponseEntity.badRequest().build();
 		}
 	}
